@@ -26,17 +26,9 @@ public class MainController {
 
     @FXML
     void onClickCalcButton(ActionEvent event) {
-        try {
             double r = Double.parseDouble(radiusField.getText());
             double l = Double.parseDouble(lengthField.getText());
-
             double surfaceArea = 2 * Math.PI * r * (r + l);
-
-            surfaceareaField.setText(String.format("%.2f", surfaceArea));
-        } catch (NumberFormatException e) {
-            surfaceareaField.setText("Hibás bevitel!");
-        }
+            surfaceareaField.setText(String.valueOf(surfaceArea));
     }
-
-
 }
